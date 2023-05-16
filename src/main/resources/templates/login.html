@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/signUp.css">
+</head>
+
+<body>
+<title>Test Form</title>
+
+<div id="bg1"></div>
+<div id="bg2"></div>
+
+<div id="particleGenerator"></div>
+
+<span class="title" id='theTitle'><h1>Login</h1></span>
+
+<span class="message" id="mesOut">Hello there!</span>
+
+<div class="form">
+    <form action="/login" method="post" th:object="${loginRequest}">
+        <span class="name" id="name1"><p> Email:</p></span><br>
+        <input class="inputBox" type="email" name="email" value=""><br>
+        <span class="error"></span><br>
+        <span class="name" id="name2"><p>password:</p></span><br>
+        <input class="inputBox" type="password" name="password" value=""><br><br>
+        <button type="submit" class="submitButton" id="theButton" onclick="beginTransition()">Signin</button>
+
+        <span class="error"></span><br><br>
+        <a href="/register">or Sign Up</a>
+    </form>
+</div>
+
+</body>
+<script src="js/signUp.js"></script>
+</html>
